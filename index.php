@@ -6,6 +6,10 @@ $imgnames = array_merge($pngnames, $jpgnames);
 sort($imgnames);
 // select a random image
 $imgname = $imgnames[array_rand($imgnames)];
+// do the same for the background images
+$bkgnames = glob('style/*.jpg');
+sort($bkgnames);
+$bkgname = $bkgnames[array_rand($bkgnames)];
 ?>
 <html>
 <head>
@@ -19,7 +23,7 @@ html {
 body {
     width:100%;
     min-height:100%;
-    background:url(style/background.jpg);
+    background:url(<?php print $bkgname; ?>);
     background-size:cover;
     margin:0px;
 }
