@@ -5,11 +5,11 @@ $jpgnames = glob('*.jpg');
 $imgnames = array_merge($pngnames, $jpgnames);
 sort($imgnames);
 // select a random image
-$imgname = $imgnames[array_rand($imgnames)];
+$imgname = urlencode($imgnames[array_rand($imgnames)]);
 // do the same for the background images
 $bkgnames = glob('style/*.jpg');
 sort($bkgnames);
-$bkgname = $bkgnames[array_rand($bkgnames)];
+$bkgname = urlencode($bkgnames[array_rand($bkgnames)]);
 ?>
 <html>
 <head>
