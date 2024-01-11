@@ -5,11 +5,11 @@ $jpgnames = glob('*.jpg');
 $imgnames = array_merge($pngnames, $jpgnames);
 sort($imgnames);
 // select a random image
-$imgname = urlencode($imgnames[array_rand($imgnames)]);
+$imgname = $imgnames[array_rand($imgnames)];
 // do the same for the background images
 $bkgnames = glob('style/*.jpg');
 sort($bkgnames);
-$bkgname = urlencode($bkgnames[array_rand($bkgnames)]);
+$bkgname = $bkgnames[array_rand($bkgnames)];
 ?>
 <html>
 <head>
@@ -31,7 +31,7 @@ body {
     margin:1%;
     width:97%;
     height:97%;
-    background:url(<?php print $imgname; ?>);
+    background:url(<?php print str_replace(" ", "%20", $imgname); ?>);
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
