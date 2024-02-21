@@ -39,10 +39,20 @@
         background-repeat:no-repeat;
         background-position:center;
     }
+    #clock {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+        background-color: white;
+        padding: 5px;
+        font-weight: bold;
+    }
 </style>
 </head>
 <body>
 <!-- display element holding the figure -->
 <a href="<?php print $imgname; ?>"><div id="meme"></div></a>
+<div id="clock"><?php date_default_timezone_set('Europe/Brussels'); echo date('h:i', time()); ?></div>
 </body>
 </html>
