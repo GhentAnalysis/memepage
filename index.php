@@ -53,6 +53,6 @@
 <body>
 <!-- display element holding the figure -->
 <a href="<?php print $imgname; ?>"><div id="meme"></div></a>
-<div id="clock"><?php date_default_timezone_set('Europe/Brussels'); echo date('h:i', time()); ?></div>
+<div id="clock"><?php date_default_timezone_set('Europe/Brussels'); echo date('H:i', time()); ?></div>
 </body>
 </html>
